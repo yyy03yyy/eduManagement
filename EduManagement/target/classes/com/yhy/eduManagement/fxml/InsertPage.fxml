@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="850.0" spacing="40.0" styleClass="background-Vbox" stylesheets="@../css/pageBackground.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yhy.eduManagement.controller.InsertController">
+   <children>
+      <GridPane alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="插入数据" GridPane.columnIndex="1">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnBack" mnemonicParsing="false" onMouseClicked="#back" text="返回">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+      <GridPane>
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="学生名">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="54.0" layoutY="13.0" text="性别" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="54.0" layoutY="43.0" text="家庭住址" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="54.0" layoutY="73.0" text="年龄" GridPane.columnIndex="2">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="338.0" layoutY="13.0" text="操作结果" GridPane.columnIndex="5">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" onMouseClicked="#onInsertStudentClicked" text="添加学生" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <TextField fx:id="tfStudentName" GridPane.columnIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="tfStudentAge" layoutX="152.0" layoutY="11.0" GridPane.columnIndex="3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="tfStudentAddress" layoutX="436.0" layoutY="11.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <RadioButton fx:id="rbMan" mnemonicParsing="false" text="男" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="tgSex" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rbWoman" layoutX="169.0" layoutY="46.0" mnemonicParsing="false" text="女" toggleGroup="$tgSex" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <Label fx:id="studentResult" text="暂无" GridPane.columnIndex="5" GridPane.rowIndex="1" GridPane.rowSpan="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <GridPane layoutX="10.0" layoutY="216.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="课程名">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="54.0" layoutY="13.0" text="上课地点" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="54.0" layoutY="43.0" text="学分" GridPane.columnIndex="2">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="338.0" layoutY="13.0" text="操作结果" GridPane.columnIndex="5">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" onMouseClicked="#onInsertCourseClicked" text="添加课程" GridPane.columnIndex="4" GridPane.rowSpan="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <TextField fx:id="tfCourseName" GridPane.columnIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="tfCourseCredit" layoutX="152.0" layoutY="11.0" GridPane.columnIndex="3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <RadioButton fx:id="rbYun" mnemonicParsing="false" text="云塘" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="rbJin" layoutX="169.0" layoutY="46.0" mnemonicParsing="false" text="金盆岭" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <Label fx:id="courseResult" text="暂无" GridPane.columnIndex="5" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <GridPane layoutX="10.0" layoutY="286.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="学生学号">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="54.0" layoutY="13.0" text="成绩" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="54.0" layoutY="13.0" text="课程编号" GridPane.columnIndex="2">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="338.0" layoutY="13.0" text="操作结果" GridPane.columnIndex="5">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" onMouseClicked="#onInsertGradeClicked" text="添加学生选课" GridPane.columnIndex="4" GridPane.rowSpan="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <TextField fx:id="tfSno" GridPane.columnIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="tfCno" layoutX="152.0" layoutY="11.0" GridPane.columnIndex="3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="tfGrade" layoutX="436.0" layoutY="11.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="gradeResult" text="暂无" GridPane.columnIndex="5" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+   </children>
+</VBox>

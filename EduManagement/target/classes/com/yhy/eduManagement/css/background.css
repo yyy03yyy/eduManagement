@@ -1,0 +1,5 @@
+.background-Vbox{
+    -fx-background-image: url("../img/csustBackground.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+}

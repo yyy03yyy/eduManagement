@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="850.0" spacing="40.0" styleClass="background-Vbox" stylesheets="@../css/pageBackground.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yhy.eduManagement.controller.DeleteController">
+   <children>
+      <GridPane>
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="删除数据" GridPane.columnIndex="1">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnBack" mnemonicParsing="false" onMouseClicked="#back" text="返回">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+      <GridPane layoutX="10.0" layoutY="246.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="学生学号">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfStudentNo" GridPane.columnIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Button mnemonicParsing="false" onMouseClicked="#onDeleteStudentClicked" text="删除学生" GridPane.columnIndex="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Label fx:id="studentResult" layoutX="92.0" layoutY="18.0" text="暂无操作结果" GridPane.columnIndex="3">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <GridPane layoutX="10.0" layoutY="261.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="课程编号">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfCourseNo" GridPane.columnIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Button mnemonicParsing="false" onMouseClicked="#onDeleteCourseClicked" text="删除课程" GridPane.columnIndex="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Label fx:id="courseResult" text="暂无操作结果" GridPane.columnIndex="3">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <GridPane layoutX="10.0" layoutY="276.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="学生学号">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="92.0" layoutY="13.0" text="课程编号" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfSno" GridPane.columnIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="tfCno" layoutX="223.0" layoutY="11.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Button mnemonicParsing="false" onMouseClicked="#onDeleteGradeClicked" text="删除选课" GridPane.columnIndex="2" GridPane.rowSpan="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Label fx:id="gradeResult" text="暂无操作结果" GridPane.columnIndex="3" GridPane.rowSpan="2">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+   </children>
+</VBox>
